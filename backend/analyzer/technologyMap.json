@@ -1,0 +1,391 @@
+{
+  "languages": {
+    "javascript": {
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx"
+      ],
+      "manifests": [
+        "package.json"
+      ],
+      "importPattern": "(?:^\\s*import.*from\\s+['\"]([\\w\\.\\-\\/@]+)['\"]|require\\(['\"]([\\w\\.\\-\\/@]+)['\"]\\))",
+      "classPattern": "class\\s+([a-zA-Z0-9_]+)",
+      "functionPattern": "(?:function\\s+([a-zA-Z0-9_]+)\\s*\\(|const\\s+([a-zA-Z0-9_]+)\\s*=\\s*(?:async\\s*)?(?:\\([^)]*\\)|[a-zA-Z0-9_]+)\\s*=>)"
+    },
+    "python": {
+      "extensions": [
+        ".py"
+      ],
+      "manifests": [
+        "requirements.txt",
+        "Pipfile",
+        "pyproject.toml"
+      ],
+      "importPattern": "^\\s*(?:import\\s+([\\w\\, ]+)|from\\s+([\\w\\.]+)\\s+import)",
+      "classPattern": "class\\s+([a-zA-Z0-9_]+)\\s*[:\\(]",
+      "functionPattern": "def\\s+([a-zA-Z0-9_]+)\\s*\\("
+    },
+    "go": {
+      "extensions": [
+        ".go"
+      ],
+      "manifests": [
+        "go.mod"
+      ],
+      "importPattern": "^\\s*(?:import\\s+\"?([\\w\\.\\-\\/]+)\"?|\\s*\"([\\w\\.\\-\\/]+)\")",
+      "classPattern": "type\\s+([a-zA-Z0-9_]+)\\s+struct",
+      "functionPattern": "func\\s+(?:\\([^)]+\\)\\s+)?([a-zA-Z0-9_]+)\\s*\\("
+    },
+    "rust": {
+      "extensions": [
+        ".rs"
+      ],
+      "manifests": [
+        "Cargo.toml"
+      ],
+      "importPattern": "^\\s*(?:use\\s+([\\w\\:]+)|extern\\s+crate\\s+(\\w+))",
+      "classPattern": "(?:struct|trait)\\s+([a-zA-Z0-9_]+)",
+      "functionPattern": "fn\\s+([a-zA-Z0-9_]+)\\s*\\("
+    },
+    "java": {
+      "extensions": [
+        ".java"
+      ],
+      "manifests": [
+        "pom.xml",
+        "build.gradle"
+      ],
+      "importPattern": "^\\s*import\\s+([\\w\\.]+);",
+      "classPattern": "(?:public|private|protected)?\\s*(?:abstract|final)?\\s*class\\s+([a-zA-Z0-9_]+)",
+      "functionPattern": "(?:public|private|protected)\\s+(?:static\\s+)?[\\w\\<\\>\\[\\]]+\\s+([a-zA-Z0-9_]+)\\s*\\("
+    },
+    "ruby": {
+      "extensions": [
+        ".rb"
+      ],
+      "manifests": [
+        "Gemfile"
+      ],
+      "importPattern": "^\\s*(?:require|load)\\s+['\"]([\\w\\-\\/]+)['\"]",
+      "classPattern": "class\\s+([a-zA-Z0-9_]+)",
+      "functionPattern": "def\\s+([a-zA-Z0-9_]+)"
+    },
+    "php": {
+      "extensions": [
+        ".php"
+      ],
+      "manifests": [
+        "composer.json"
+      ],
+      "importPattern": "^\\s*use\\s+([\\w\\\\]+);",
+      "classPattern": "class\\s+([a-zA-Z0-9_]+)",
+      "functionPattern": "function\\s+([a-zA-Z0-9_]+)\\s*\\("
+    }
+  },
+  "technologies": [
+    {
+      "name": "React",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "react"
+      ]
+    },
+    {
+      "name": "Next.js",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "next"
+      ]
+    },
+    {
+      "name": "Vue.js",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "vue"
+      ]
+    },
+    {
+      "name": "Angular",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "angular"
+      ]
+    },
+    {
+      "name": "Express.js",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "express"
+      ]
+    },
+    {
+      "name": "NestJS",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "@nestjs/core"
+      ]
+    },
+    {
+      "name": "Koa",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "koa"
+      ]
+    },
+    {
+      "name": "Fastify",
+      "type": "framework",
+      "language": "javascript",
+      "signatures": [
+        "fastify"
+      ]
+    },
+    {
+      "name": "MongoDB",
+      "type": "database",
+      "language": "javascript",
+      "signatures": [
+        "mongoose",
+        "mongodb"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "type": "database",
+      "language": "javascript",
+      "signatures": [
+        "mysql2"
+      ]
+    },
+    {
+      "name": "PostgreSQL",
+      "type": "database",
+      "language": "javascript",
+      "signatures": [
+        "pg"
+      ]
+    },
+    {
+      "name": "SQLite",
+      "type": "database",
+      "language": "javascript",
+      "signatures": [
+        "sqlite3",
+        "better-sqlite3"
+      ]
+    },
+    {
+      "name": "Sequelize",
+      "type": "orm",
+      "language": "javascript",
+      "signatures": [
+        "sequelize"
+      ]
+    },
+    {
+      "name": "TypeORM",
+      "type": "orm",
+      "language": "javascript",
+      "signatures": [
+        "typeorm"
+      ]
+    },
+    {
+      "name": "Prisma",
+      "type": "orm",
+      "language": "javascript",
+      "signatures": [
+        "prisma"
+      ]
+    },
+    {
+      "name": "JWT",
+      "type": "authentication",
+      "language": "javascript",
+      "signatures": [
+        "jsonwebtoken"
+      ]
+    },
+    {
+      "name": "Passport",
+      "type": "authentication",
+      "language": "javascript",
+      "signatures": [
+        "passport"
+      ]
+    },
+    {
+      "name": "Bcrypt",
+      "type": "security",
+      "language": "javascript",
+      "signatures": [
+        "bcrypt",
+        "bcryptjs"
+      ]
+    },
+    {
+      "name": "Axios",
+      "type": "library",
+      "language": "javascript",
+      "signatures": [
+        "axios"
+      ]
+    },
+    {
+      "name": "Socket.IO",
+      "type": "library",
+      "language": "javascript",
+      "signatures": [
+        "socket.io"
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "type": "css",
+      "language": "javascript",
+      "signatures": [
+        "tailwindcss"
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "type": "css",
+      "language": "javascript",
+      "signatures": [
+        "bootstrap"
+      ]
+    },
+    {
+      "name": "Vite",
+      "type": "build",
+      "language": "javascript",
+      "signatures": [
+        "vite"
+      ]
+    },
+    {
+      "name": "Webpack",
+      "type": "build",
+      "language": "javascript",
+      "signatures": [
+        "webpack"
+      ]
+    },
+    {
+      "name": "Flask",
+      "type": "framework",
+      "language": "python",
+      "signatures": [
+        "flask"
+      ]
+    },
+    {
+      "name": "Django",
+      "type": "framework",
+      "language": "python",
+      "signatures": [
+        "django"
+      ]
+    },
+    {
+      "name": "FastAPI",
+      "type": "framework",
+      "language": "python",
+      "signatures": [
+        "fastapi"
+      ]
+    },
+    {
+      "name": "MongoDB (PyMongo)",
+      "type": "database",
+      "language": "python",
+      "signatures": [
+        "pymongo"
+      ]
+    },
+    {
+      "name": "BSON",
+      "type": "library",
+      "language": "python",
+      "signatures": [
+        "bson"
+      ]
+    },
+    {
+      "name": "Dotenv",
+      "type": "tool",
+      "language": "python",
+      "signatures": [
+        "dotenv"
+      ]
+    },
+    {
+      "name": "OpenCV",
+      "type": "library",
+      "language": "python",
+      "signatures": [
+        "cv2"
+      ]
+    },
+    {
+      "name": "NumPy",
+      "type": "library",
+      "language": "python",
+      "signatures": [
+        "numpy"
+      ]
+    },
+    {
+      "name": "Pillow (PIL)",
+      "type": "library",
+      "language": "python",
+      "signatures": [
+        "pil",
+        "PIL"
+      ]
+    },
+    {
+      "name": "Werkzeug",
+      "type": "library",
+      "language": "python",
+      "signatures": [
+        "werkzeug"
+      ]
+    },
+    {
+      "name": "Gin Gonic",
+      "type": "framework",
+      "language": "go",
+      "signatures": [
+        "github.com/gin-gonic/gin",
+        "gin"
+      ]
+    },
+    {
+      "name": "Actix Web",
+      "type": "framework",
+      "language": "rust",
+      "signatures": [
+        "actix_web",
+        "actix-web"
+      ]
+    },
+    {
+      "name": "Tokio",
+      "type": "library",
+      "language": "rust",
+      "signatures": [
+        "tokio"
+      ]
+    }
+  ]
+}

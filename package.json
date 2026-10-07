@@ -1,0 +1,18 @@
+{
+  "name": "codeatlas",
+  "version": "2.0.0",
+  "private": true,
+  "description": "CodeAtlas - automated repository architecture, security and health auditor",
+  "scripts": {
+    "setup": "npm install --prefix backend",
+    "dev": "npm run dev --prefix backend",
+    "start": "npm start --prefix backend",
+    "seed": "npm run db:seed --prefix backend",
+    "test": "npm test --prefix backend"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@sentry/browser": "^11.2.0",
+    "@sentry/node": "^11.1.0"
+  }
+}
